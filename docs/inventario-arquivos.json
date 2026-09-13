@@ -1,0 +1,62 @@
+{
+  "date": "2026-09-13",
+  "files": [
+    {
+      "file": "Build-Your-Own-Jarvis-Fable-5.1-Prompt-Pack.pdf",
+      "bytes": 310366,
+      "sha256": "0188db3ae1c4030d17c4f48c2d29a131b01a06917ae3392bf74ea0387bff16c2",
+      "extracted_text": "extraidos/Build-Your-Own-Jarvis-Fable-5.1-Prompt-Pack.txt",
+      "pages": 12
+    },
+    {
+      "file": "Jarvis-Screen-Starter-Pack.pdf",
+      "bytes": 270865,
+      "sha256": "c9b37cebc42442eb1a2178dca457ef7b83e08b5f5bd63372ef45e1fd09ded454",
+      "extracted_text": "extraidos/Jarvis-Screen-Starter-Pack.txt",
+      "pages": 7
+    },
+    {
+      "file": "jarvis-claude-fable-5.md",
+      "bytes": 6820,
+      "sha256": "108bb7a83185918dbfea4515867ced1429bffd8c39db833c50efaf4ade952f5c"
+    },
+    {
+      "file": "JARVIS-Prompt-Pack.pdf",
+      "bytes": 627476,
+      "sha256": "b5f697526b04951165539a4af62a1bf238e59ff3bbcb1995d8e5d9affe2b2313",
+      "extracted_text": "extraidos/JARVIS-Prompt-Pack.txt",
+      "pages": 6
+    },
+    {
+      "file": "Build-Your-Own-Jarvis-GPT-6-Astra-Prompt-Pack (1).pdf",
+      "bytes": 372190,
+      "sha256": "11f276025d5c872f5695c071984bf273c6c6e4565bb85962884918b62ad78fde",
+      "extracted_text": "extraidos/Build-Your-Own-Jarvis-GPT-6-Astra-Prompt-Pack.txt",
+      "pages": 22
+    },
+    {
+      "file": "Texto colado(20260913-134430).txt",
+      "bytes": 15042,
+      "sha256": "6a04e84a6e1acf054a8741a926aa45639abb315ad2c8365e18167c2473aa5543"
+    },
+    {
+      "file": "Build-Your-Own-Jarvis-GPT-6-Astra-Prompt-Pack.pdf",
+      "bytes": 372190,
+      "sha256": "11f276025d5c872f5695c071984bf273c6c6e4565bb85962884918b62ad78fde",
+      "identical_to": "Build-Your-Own-Jarvis-GPT-6-Astra-Prompt-Pack (1).pdf",
+      "extracted_text": "extraidos/Build-Your-Own-Jarvis-GPT-6-Astra-Prompt-Pack.txt",
+      "pages": 22
+    },
+    {
+      "file": "jarvis-claude-fable-5-1.md",
+      "bytes": 12770,
+      "sha256": "83eb561d5c7bd33f2e1095215eaa031694e738f8f30a1176b0fa84b64348e6f1"
+    },
+    {
+      "file": "jarvis-sem-filtro-resultados-insanos.md",
+      "bytes": 18541,
+      "sha256": "7635eba487a614a2db2cc235a1540ba287ddec3e8ae92637bac17cc6639f4f67"
+    }
+  ],
+  "unique_contents": 8
+}

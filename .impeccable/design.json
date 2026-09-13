@@ -1,0 +1,290 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-13T15:38:53.970258+00:00",
+  "title": "Design System: Jarvis v7",
+  "extensions": {
+    "colorMeta": {
+      "bg": {
+        "role": "neutral",
+        "displayName": "Carvão esverdeado",
+        "tonalRamp": [
+          "oklch(15.00% 0.00763 145.26)",
+          "oklch(26.43% 0.00763 145.26)",
+          "oklch(37.86% 0.00763 145.26)",
+          "oklch(49.29% 0.00763 145.26)",
+          "oklch(60.71% 0.00763 145.26)",
+          "oklch(72.14% 0.00763 145.26)",
+          "oklch(83.57% 0.00763 145.26)",
+          "oklch(95.00% 0.00763 145.26)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Divisor verde cinza",
+        "tonalRamp": [
+          "oklch(15.00% 0.01760 145.16)",
+          "oklch(26.43% 0.01760 145.16)",
+          "oklch(37.86% 0.01760 145.16)",
+          "oklch(49.29% 0.01760 145.16)",
+          "oklch(60.71% 0.01760 145.16)",
+          "oklch(72.14% 0.01760 145.16)",
+          "oklch(83.57% 0.01760 145.16)",
+          "oklch(95.00% 0.01760 145.16)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Texto secundário",
+        "tonalRamp": [
+          "oklch(15.00% 0.02457 143.32)",
+          "oklch(26.43% 0.02457 143.32)",
+          "oklch(37.86% 0.02457 143.32)",
+          "oklch(49.29% 0.02457 143.32)",
+          "oklch(60.71% 0.02457 143.32)",
+          "oklch(72.14% 0.02457 143.32)",
+          "oklch(83.57% 0.02457 143.32)",
+          "oklch(95.00% 0.02457 143.32)"
+        ]
+      },
+      "green": {
+        "role": "primary",
+        "displayName": "Verde ação",
+        "tonalRamp": [
+          "oklch(15.00% 0.10381 139.10)",
+          "oklch(26.43% 0.10381 139.10)",
+          "oklch(37.86% 0.10381 139.10)",
+          "oklch(49.29% 0.10381 139.10)",
+          "oklch(60.71% 0.10381 139.10)",
+          "oklch(72.14% 0.10381 139.10)",
+          "oklch(83.57% 0.10381 139.10)",
+          "oklch(95.00% 0.10381 139.10)"
+        ]
+      },
+      "green-ink": {
+        "role": "primary",
+        "displayName": "Tinta verde escura",
+        "tonalRamp": [
+          "oklch(15.00% 0.02971 137.00)",
+          "oklch(26.43% 0.02971 137.00)",
+          "oklch(37.86% 0.02971 137.00)",
+          "oklch(49.29% 0.02971 137.00)",
+          "oklch(60.71% 0.02971 137.00)",
+          "oklch(72.14% 0.02971 137.00)",
+          "oklch(83.57% 0.02971 137.00)",
+          "oklch(95.00% 0.02971 137.00)"
+        ]
+      },
+      "danger": {
+        "role": "secondary",
+        "displayName": "Coral de perigo",
+        "tonalRamp": [
+          "oklch(15.00% 0.09184 27.42)",
+          "oklch(26.43% 0.09184 27.42)",
+          "oklch(37.86% 0.09184 27.42)",
+          "oklch(49.29% 0.09184 27.42)",
+          "oklch(60.71% 0.09184 27.42)",
+          "oklch(72.14% 0.09184 27.42)",
+          "oklch(83.57% 0.09184 27.42)",
+          "oklch(95.00% 0.09184 27.42)"
+        ]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Texto claro",
+        "tonalRamp": [
+          "oklch(15.00% 0.00739 132.42)",
+          "oklch(26.43% 0.00739 132.42)",
+          "oklch(37.86% 0.00739 132.42)",
+          "oklch(49.29% 0.00739 132.42)",
+          "oklch(60.71% 0.00739 132.42)",
+          "oklch(72.14% 0.00739 132.42)",
+          "oklch(83.57% 0.00739 132.42)",
+          "oklch(95.00% 0.00739 132.42)"
+        ]
+      },
+      "field": {
+        "role": "neutral",
+        "displayName": "Fundo de campo",
+        "tonalRamp": [
+          "oklch(15.00% 0.01005 145.18)",
+          "oklch(26.43% 0.01005 145.18)",
+          "oklch(37.86% 0.01005 145.18)",
+          "oklch(49.29% 0.01005 145.18)",
+          "oklch(60.71% 0.01005 145.18)",
+          "oklch(72.14% 0.01005 145.18)",
+          "oklch(83.57% 0.01005 145.18)",
+          "oklch(95.00% 0.01005 145.18)"
+        ]
+      },
+      "primary-hover": {
+        "role": "primary",
+        "displayName": "Verde ação em hover",
+        "tonalRamp": [
+          "oklch(15.00% 0.09180 138.84)",
+          "oklch(26.43% 0.09180 138.84)",
+          "oklch(37.86% 0.09180 138.84)",
+          "oklch(49.29% 0.09180 138.84)",
+          "oklch(60.71% 0.09180 138.84)",
+          "oklch(72.14% 0.09180 138.84)",
+          "oklch(83.57% 0.09180 138.84)",
+          "oklch(95.00% 0.09180 138.84)"
+        ]
+      },
+      "note": {
+        "role": "secondary",
+        "displayName": "Azul de notas",
+        "tonalRamp": [
+          "oklch(15.00% 0.05377 247.69)",
+          "oklch(26.43% 0.05377 247.69)",
+          "oklch(37.86% 0.05377 247.69)",
+          "oklch(49.29% 0.05377 247.69)",
+          "oklch(60.71% 0.05377 247.69)",
+          "oklch(72.14% 0.05377 247.69)",
+          "oklch(83.57% 0.05377 247.69)",
+          "oklch(95.00% 0.05377 247.69)"
+        ]
+      },
+      "memory": {
+        "role": "secondary",
+        "displayName": "Verde de memórias",
+        "tonalRamp": [
+          "oklch(15.00% 0.11071 139.45)",
+          "oklch(26.43% 0.11071 139.45)",
+          "oklch(37.86% 0.11071 139.45)",
+          "oklch(49.29% 0.11071 139.45)",
+          "oklch(60.71% 0.11071 139.45)",
+          "oklch(72.14% 0.11071 139.45)",
+          "oklch(83.57% 0.11071 139.45)",
+          "oklch(95.00% 0.11071 139.45)"
+        ]
+      }
+    },
+    "shadows": [
+      {
+        "name": "dialog",
+        "value": "0 18px 60px #0008",
+        "purpose": "Elevação da janela modal."
+      }
+    ],
+    "motion": [
+      {
+        "name": "button-background",
+        "value": "background 0.15s",
+        "purpose": "Hover dos botões."
+      },
+      {
+        "name": "mobile-sidebar",
+        "value": "left 0.2s",
+        "purpose": "Entrada da gaveta móvel."
+      },
+      {
+        "name": "loading",
+        "value": "rotate 1.5s linear infinite",
+        "purpose": "Indicador de carregamento; CSS removido sob movimento reduzido."
+      },
+      {
+        "name": "graph-fit",
+        "value": "500ms",
+        "purpose": "Enquadramento JavaScript após 400ms; não acompanha prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide-min",
+        "value": "1600px"
+      },
+      {
+        "name": "context-hidden-max",
+        "value": "1190px"
+      },
+      {
+        "name": "mobile-max",
+        "value": "800px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botão principal",
+      "kind": "button",
+      "description": "Botão principal extraído da implementação atual.",
+      "html": "<button class=\"ds-button ds-primary\">Salvar preferências</button>",
+      "css": ".ds-button { font-family: \"Manrope Variable\", sans-serif; color:#e6e9e4; cursor:pointer; }.ds-button:disabled {\n  cursor: not-allowed;\n  opacity: 0.45;\n}\n.ds-button {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  gap: 8px;\n  min-height: 39px;\n  padding: 9px 14px;\n  border: 1px solid #3b473a;\n  border-radius: 8px;\n  background: transparent;\n  font-size: 12px;\n  font-weight: 600;\n  white-space: nowrap;\n  transition: background 0.15s;\n}\n.ds-button:hover {\n  background: #293127;\n}\n.ds-button:focus-visible { outline: 2px solid var(--green, #b1e5a3); outline-offset: 4px; }.ds-primary {\n  background: var(--green);\n  border-color: var(--green);\n  color: var(--green-ink);\n}\n.ds-primary:hover {\n  background: #c5f3b8;\n}\n",
+      "refersTo": "button-primary"
+    },
+    {
+      "name": "Botão secundário",
+      "kind": "button",
+      "description": "Botão secundário extraído da implementação atual.",
+      "html": "<button class=\"ds-button\">Verificar</button>",
+      "css": ".ds-button { font-family: \"Manrope Variable\", sans-serif; color:#e6e9e4; cursor:pointer; }.ds-button:disabled {\n  cursor: not-allowed;\n  opacity: 0.45;\n}\n.ds-button {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  gap: 8px;\n  min-height: 39px;\n  padding: 9px 14px;\n  border: 1px solid #3b473a;\n  border-radius: 8px;\n  background: transparent;\n  font-size: 12px;\n  font-weight: 600;\n  white-space: nowrap;\n  transition: background 0.15s;\n}\n.ds-button:hover {\n  background: #293127;\n}\n.ds-button:focus-visible { outline: 2px solid var(--green, #b1e5a3); outline-offset: 4px; }",
+      "refersTo": "button-secondary"
+    },
+    {
+      "name": "Botão textual",
+      "kind": "button",
+      "description": "Botão textual extraído da implementação atual.",
+      "html": "<button class=\"ds-text\">Explorar primeiro, conectar depois</button>",
+      "css": ".ds-text { font-family: \"Manrope Variable\", sans-serif; cursor:pointer; }.ds-text {\n  display: inline-flex;\n  align-items: center;\n  gap: 7px;\n  border: 0;\n  background: none;\n  padding: 5px 0;\n  color: #bbcdb0;\n  font-size: 12px;\n  text-align: left;\n}\n.ds-text:hover {\n  color: var(--green);\n}\n.ds-text:focus-visible { outline: 2px solid var(--green, #b1e5a3); outline-offset: 4px; }"
+    },
+    {
+      "name": "Campo de texto",
+      "kind": "input",
+      "description": "Campo de texto extraído da implementação atual.",
+      "html": "<label class=\"ds-label\">Título<input class=\"ds-input\" placeholder=\"Nome do documento\"></label>",
+      "css": ".ds-label { display:grid; gap:8px; color:#e6e9e4; font:12px \"Manrope Variable\", sans-serif; } .ds-input { font:14px \"Manrope Variable\", sans-serif; border:1px solid var(--line, #303830); border-radius:9px; background:#121612; color:#e6e9e4; padding:12px 13px; } .ds-input::placeholder { color:#9aa697; }.ds-input:focus-visible { outline: 2px solid var(--green, #b1e5a3); outline-offset: 4px; }",
+      "refersTo": "input"
+    },
+    {
+      "name": "Navegação",
+      "kind": "nav",
+      "description": "Navegação extraído da implementação atual.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Navegação principal\"><button class=\"ds-selected\" aria-current=\"page\">Conversa</button><button>Conhecimento</button></nav>",
+      "css": ".ds-nav { font-family:\"Manrope Variable\", sans-serif; } .ds-nav button { cursor:pointer; }.ds-nav {\n  display: flex;\n  flex-direction: column;\n  gap: 4px;\n}\n.ds-nav > button {\n  display: flex;\n  align-items: center;\n  gap: 12px;\n  background: none;\n  border: none;\n  text-align: left;\n  padding: 12px 14px;\n  border-radius: 8px;\n  color: #acb8a8;\n  font-size: 12px;\n  font-weight: 550;\n  min-height: 42px;\n}\n.ds-nav > button:hover {\n  color: #f1f7ed;\n  background: #222a20;\n}\n.ds-nav > button.ds-selected {\n  color: var(--green);\n  background: #263422;\n}\n.ds-nav button:focus-visible { outline: 2px solid var(--green, #b1e5a3); outline-offset: 4px; }"
+    },
+    {
+      "name": "Tags de estado",
+      "kind": "chip",
+      "description": "Tags de estado extraído da implementação atual.",
+      "html": "<span class=\"ds-tag\">Pendente</span> <span class=\"ds-tag ds-good\">Credencial salva</span> <span class=\"ds-tag ds-warn\">Atenção</span>",
+      "css": ".ds-tag { font-family:\"Manrope Variable\", sans-serif; }.ds-tag {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 10px;\n  line-height: 1.4;\n  white-space: nowrap;\n  border: 1px solid #46513f;\n  background: #242c21;\n  color: #c0cbb9;\n  padding: 4px 7px;\n  border-radius: 5px;\n  font-weight: 500;\n}\n.ds-tag.ds-good {\n  background: #243d24;\n  color: #c3ecb8;\n  border-color: #3b6137;\n}\n.ds-tag.ds-warn {\n  background: #493321;\n  color: #f4cf9d;\n  border-color: #6b4f34;\n}\n"
+    },
+    {
+      "name": "Painel",
+      "kind": "card",
+      "description": "Painel extraído da implementação atual.",
+      "html": "<section class=\"ds-panel\"><h3 class=\"ds-title\">Estúdio de mídia</h3><p class=\"ds-copy\">Crie com sua própria conexão.</p></section>",
+      "css": ".ds-panel { color:#e6e9e4; font:14px \"Manrope Variable\", sans-serif; } .ds-title { margin:0; font-size:15px; font-weight:600; } .ds-copy { margin:12px 0 0; color:var(--muted, #a2afa1); line-height:1.75; }.ds-panel {\n  border: 1px solid #3b4a31;\n  border-radius: var(--radius);\n  background: #1a2315;\n  padding: 25px;\n}\n"
+    },
+    {
+      "name": "Compositor",
+      "kind": "custom",
+      "description": "Compositor extraído da implementação atual.",
+      "html": "<div class=\"ds-composer\"><textarea class=\"ds-message\" aria-label=\"Mensagem\" placeholder=\"Converse com seu conhecimento\"></textarea></div>",
+      "css": ".ds-message { width:100%; color:#e6e9e4; font-family:\"Manrope Variable\", sans-serif; line-height:1.65; } .ds-message::placeholder { color:#9aa697; }.ds-composer {\n  border: 1px solid #48553d;\n  background: #1d2419;\n  border-radius: var(--radius);\n  padding: 16px 15px 11px;\n}\n.ds-composer textarea {\n  border: none;\n  background: none;\n  padding: 0 4px;\n  min-height: 48px;\n  max-height: 150px;\n  resize: none;\n  font-size: 12px;\n  box-shadow: none;\n}\n.ds-composer textarea:focus {\n  outline: none;\n}\n.ds-composer:focus-within {\n  border-color: #8fab76;\n}\n"
+    }
+  ],
+  "narrative": {
+    "northStar": "Mesa de trabalho",
+    "overview": "Uma ferramenta pessoal de trabalho com fundo carvão esverdeado, tipografia Manrope local, bordas discretas e verde claro para ações. A densidade favorece conversa, leitura de documentos e configuração de instrumentos com estado explícito.\n\nA direção vem do comentário de `apps/web/index.html` (seed `95931ffc`); os valores e comportamentos abaixo descrevem `apps/web/src/style.css` e `App.tsx`. O nome e os compromissos duráveis vêm de `PRODUCT.md`. O sidecar `.impeccable/design.json` contém snippets autônomos e extensões; suas rampas OKLCH são prévias sintetizadas para o painel, não tokens novos da aplicação. Esta documentação captura a implementação: não constitui aprovação estética contra uma comp ou QUALITY BAR, que não foram estabelecidas.",
+    "keyCharacteristics": [
+      "Superfícies escuras com separação tonal e bordas finas.",
+      "Verde claro como ação, seleção e confirmação.",
+      "Controles compactos com texto explícito sobre estado e disponibilidade.",
+      "Texto como alternativa à voz e ao mapa tridimensional."
+    ],
+    "rules": [],
+    "dos": [
+      "**Do** reutilizar Manrope local, raios e cores existentes antes de criar variações.",
+      "**Do** manter estados textuais e distinguir credencial salva de execução comprovada.",
+      "**Do** preservar a lista textual do mapa e a alternativa escrita à voz.",
+      "**Do** verificar novos fluxos em desktop, celular, teclado e movimento reduzido."
+    ],
+    "donts": [
+      "**Don't** adicionar sombra a todo recipiente; a separação comum é tonal e por borda.",
+      "**Don't** usar cores ou o mapa como única maneira de acessar informação.",
+      "**Don't** anunciar instalação automática de atualizações, aplicativo desktop ou inferência testada sem implementação e evidência.",
+      "**Don't** tratar screenshots ou detector vazio como aprovação estética ou auditoria completa de acessibilidade."
+    ]
+  }
+}
