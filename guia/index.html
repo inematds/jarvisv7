@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jarvis v7 — Seu assistente pessoal, com o cérebro que você escolhe</title>
-<meta name="description" content="Instale o Jarvis v7: notas e memórias persistentes, Codex e Claude OAuth, OpenRouter API e estúdio Kie. Guia da versão 0.1.0.">
+<title>Jarvis v7 + JEV Reflex — cinco decisões antes da resposta</title>
+<meta name="description" content="Instale o Jarvis v7: notas e memórias persistentes, Codex e Claude OAuth, OpenRouter API e estúdio Kie. JEV Reflex real antes do cérebro. Guia da versão 0.2.0.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -121,9 +121,9 @@
   <div class="glow"></div>
   <div class="wrap">
     <div>
-      <span class="chip">Projeto aberto · versão 0.1.0 · instalação local</span>
-      <h1>Seu conhecimento.<br>Seu <span class="amb">Jarvis.</span></h1>
-      <p class="lead">Converse com suas notas, salve memórias e escolha o cérebro: Codex, Claude ou OpenRouter. Uma base que você pode usar, estudar e adaptar.</p>
+      <span class="chip">Projeto aberto · versão 0.2.0 · JEV Reflex</span>
+      <h1>Seu Jarvis.<br>Agora com <span class="amb">JEV Reflex.</span></h1>
+      <p class="lead">Cinco decisões antes da resposta: o JEV identifica o destino, avalia o pedido e consulta a evidência das notas antes do cérebro principal. Com probabilidades, latência e fallback visíveis.</p>
       <div class="cta">
         <a class="btn" href="#guia">Começar o guia</a>
         <a class="btn ghost" href="https://github.com/inematds/jarvisv7" target="_blank" rel="noopener">Ver no GitHub</a>
@@ -132,6 +132,7 @@
     <figure><img src="assets/hero.png" alt="Ilustração de um assistente organizando documentos; não representa a interface"></figure>
   </div>
 </header>
+<section id="jev"><div class="wrap"><h2>JEV Reflex: a novidade desta versão.</h2><p class="sub">O JEV real, via OpenRouter, avalia cinco perguntas em uma chamada: destino, pedido completo, direcionamento ao assistente, necessidade de ação e cobertura das notas.</p><div class="grid g3"><div class="card"><h3>1. Conecte OpenRouter</h3><p>Em Configurações → Conexões, configure sua credencial. Usar o JEV consome API e envia o pedido e até seis trechos selecionados.</p></div><div class="card"><h3>2. Ative JEV Reflex</h3><p>Em Preferências, ative “JEV · roteamento Reflex” e salve. Depois faça uma pergunta na conversa.</p></div><div class="card"><h3>3. Veja a decisão real</h3><p>Expanda Reflex no chat: modelo, probabilidades, latência e uso informado. Em falha, o chat continua e sinaliza o fallback local.</p></div></div><p class="sub">As probabilidades não são autorização para agir. O chat continua sem executar email ou agenda. Não prometemos “100 vezes mais rápido”: isso precisa ser medido no seu uso.</p><a class="btn" href="https://inematds.github.io/jarvismodelo/guia/">Crie outro Jarvis com esta base + JEV</a></div></section>
 
 <section id="oque"><div class="wrap">
   <span class="chip">O que é</span>
@@ -200,7 +201,8 @@ npm run update -- v0.1.1 --stopped</pre></div></div>
 <section id="roadmap"><div class="wrap">
   <span class="chip">Roadmap</span>
   <h2>O que está pronto e o que vem depois</h2>
-  <p class="sub">Jarvis v7 é o nome do projeto. 0.1.0 é a primeira versão do software, com limites documentados.</p>
+  <p class="sub">Jarvis v7 é o nome do projeto. 0.2.0 adiciona o JEV Reflex à base inicial, com limites documentados.</p>
+  <div class="phase"><div class="tag">0.2.0</div><div class="d"><strong>JEV Reflex integrado</strong><span>Cinco decisões reais antes do cérebro, painel no chat, ativação nas preferências e fallback local.</span></div></div>
   <div class="phase"><div class="tag">0.1.0</div><div class="d"><strong>Base funcional entregue</strong><span>Conversa, notas, memórias, mapa, seleção de cérebro, adaptador Kie, voz/tela do navegador, foco manual, backup e atualização manual.</span></div></div>
   <div class="phase"><div class="tag">Validação</div><div class="d"><strong>16 testes e OAuth real</strong><span>14 testes de API/persistência/fila e 2 de navegador aprovados. Codex e Claude responderam com OAuth. Geração paga Kie e OpenRouter não foi executada sem credenciais.</span></div></div><div class="phase"><div class="tag">Depois</div><div class="d"><strong>Expansão do sistema</strong><span>Agnes, automações, controle desktop, streaming e marketplace ainda não estão implementados. Consulte o estado da implementação no repositório.</span></div></div><p><a href="https://github.com/inematds/jarvisv7#documentação-completa">Toda a documentação no README →</a></p>
 </div></section>

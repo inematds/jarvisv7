@@ -17,12 +17,13 @@ import { backup } from "node:sqlite";
 import { randomUUID, createHash } from "node:crypto";
 import { Store, id, now } from "./store.js";
 import { Secrets } from "./secrets.js";
+import { decide } from "../../packages/reflex/reflex.js";
 import { Brains } from "./providers/brains.js";
 import { runProcess } from "./providers/process.js";
 import { MediaWorker, mediaModels } from "./services/media.js";
 import { FocusService } from "./services/focus.js";
 import type { Brain, Settings } from "../../packages/shared/types.js";
-export const VERSION = "0.1.0";
+export const VERSION = "0.2.0";
 const brainSchema = z.enum(["local", "codex", "claude", "openrouter"]);
 const noteSchema = z.object({
   title: z.string().trim().min(1).max(180),
@@ -57,6 +58,7 @@ const settingsSchema = z
     focusEnabled: z.boolean(),
     screenEnabled: z.boolean(),
     claudeEnabled: z.boolean(),
+    reflexEnabled: z.boolean(),
     mediaMaxJobs: z.number().int().min(1).max(50),
     releaseChannel: z.enum(["stable", "preview"]),
   })
@@ -131,26 +133,22 @@ export async function buildApp(
   });
   app.setErrorHandler((error: any, _req, reply) => {
     if (error instanceof z.ZodError)
-      return reply
-        .code(400)
-        .send({
-          error: "Confira os campos informados.",
-          details: error.issues.map((i: any) => ({
-            field: i.path.join("."),
-            message: i.message,
-          })),
-        });
+      return reply.code(400).send({
+        error: "Confira os campos informados.",
+        details: error.issues.map((i: any) => ({
+          field: i.path.join("."),
+          message: i.message,
+        })),
+      });
     const status =
       error.statusCode >= 400 && error.statusCode < 500
         ? error.statusCode
         : 400;
-    return reply
-      .code(status)
-      .send({
-        error:
-          error.message?.slice(0, 350) ??
-          "Não foi possível concluir. Tente novamente.",
-      });
+    return reply.code(status).send({
+      error:
+        error.message?.slice(0, 350) ??
+        "Não foi possível concluir. Tente novamente.",
+    });
   });
   app.get("/api/health", () => ({
     ok: true,
@@ -344,6 +342,9 @@ export async function buildApp(
       .object({
         message: z.string().trim().min(1).max(10000),
         image: imageSchema,
+        channel: z.enum(["text", "voice"]).default("text"),
+        final: z.boolean().optional(),
+        addressed: z.boolean().optional(),
       })
       .parse(req.body);
     const cid = (req.params as any).id;
@@ -380,12 +381,43 @@ export async function buildApp(
     const model = c.model;
     void (async () => {
       try {
-        const capture = b.message.match(
-          /^(?:lembre(?:-se)? que|anote que|memorize(?: que)?)\s+([\s\S]+)/i,
+        const reflex = await decide(
+          {
+            text: b.message,
+            channel: b.channel,
+            final: b.final,
+            addressed: b.addressed,
+            hasImage: !!b.image,
+            candidates: notes,
+          },
+          {
+            enabled:
+              settings.reflexEnabled || process.env.JARVIS_REFLEX === "jev",
+            key: secrets.get("openrouter"),
+            signal: controller.signal,
+          },
         );
+        if (controller.signal.aborted) return;
+        store.event(r.id, "reflex", reflex);
+        const selectedNotes =
+          reflex.source === "jev" && reflex.route === "general" && !b.image
+            ? []
+            : notes;
+        const capture =
+          !b.image &&
+          reflex.next === "answer" &&
+          b.message.match(
+            /^(?:lembre(?:-se)? que|anote que|memorize(?: que)?)\s+([\s\S]+)/i,
+          );
         let answer: string;
-        let sources = notes;
-        if (capture) {
+        let sources = selectedNotes;
+        if (reflex.next !== "answer") {
+          sources = [];
+          answer =
+            reflex.next === "wait"
+              ? "Aguardando o fim do pedido de voz."
+              : "Entrada de voz não dirigida ao assistente; nenhuma ação executada.";
+        } else if (capture) {
           const n = store.putNote(
             capture[1].slice(0, 80),
             capture[1],
@@ -401,7 +433,7 @@ export async function buildApp(
             effort: settings.effort,
             question: b.message,
             history,
-            notes,
+            notes: selectedNotes,
             settings,
             image: b.image,
             signal: controller.signal,
@@ -424,7 +456,7 @@ export async function buildApp(
         const message = store.message(cid, "assistant", answer, citations);
         store.updateRun(r.id, {
           state: "succeeded",
-          output: { messageId: message.id },
+          output: { messageId: message.id, reflex },
         });
         store.event(r.id, "done", { messageId: message.id });
       } catch (e) {

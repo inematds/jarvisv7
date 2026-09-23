@@ -149,3 +149,38 @@ it("aplica limite e idempotência à geração", async () => {
     ).statusCode,
   ).toBe(400);
 });
+it("persiste o Reflex e impede captura de voz parcial", async () => {
+  const { app, store } = await setup();
+  const c = store.createConversation("Voice", "local", "");
+  const response = await app.inject({
+    method: "POST",
+    url: `/api/conversations/${c.id}/turns`,
+    headers,
+    payload: {
+      message: "Lembre que isto não terminou",
+      channel: "voice",
+      final: false,
+      addressed: true,
+    },
+  });
+  await new Promise((r) => setTimeout(r, 25));
+  const run = store.run(response.json().runId)!;
+  expect(run.state).toBe("succeeded");
+  expect(run.output.reflex.next).toBe("wait");
+  expect(store.notes()).toHaveLength(0);
+});
+it("JEV sem credencial usa fallback explícito sem impedir a conversa", async () => {
+  const { app, store } = await setup();
+  store.saveSettings({ reflexEnabled: true });
+  const c = store.createConversation("Fallback", "local", "");
+  const response = await app.inject({
+    method: "POST",
+    url: `/api/conversations/${c.id}/turns`,
+    headers,
+    payload: { message: "Olá" },
+  });
+  await new Promise((r) => setTimeout(r, 25));
+  const run = store.run(response.json().runId)!;
+  expect(run.state).toBe("succeeded");
+  expect(run.output.reflex.source).toBe("fallback");
+});

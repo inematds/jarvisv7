@@ -4,7 +4,18 @@
 
 Assistente pessoal local e base de referência para criar seu próprio Jarvis. Interface em português, conhecimento persistente e escolha de cérebro por conversa: **Codex OAuth, Claude OAuth ou OpenRouter API**. Imagens e vídeos pela **Kie**.
 
-Esta entrega é a versão **0.1.0**. O [estado de implementação](docs/estado-da-implementacao.md) separa o que funciona do que ainda está no plano. O nome do projeto continua Jarvis v7; 0.1.0 é a versão do software.
+Esta entrega é a versão **0.2.0**. O [estado de implementação](docs/estado-da-implementacao.md) separa o que funciona do que ainda está no plano. O nome do projeto continua Jarvis v7; 0.1.0 é a versão do software.
+
+## Novidade: JEV Reflex — cinco decisões antes da resposta
+
+O **JEV real** orienta o chat antes do cérebro principal: destino do pedido,
+completude, direcionamento ao assistente, necessidade de ação e cobertura das notas.
+Ative **Configurações → Preferências → JEV · roteamento Reflex**, usando sua conexão
+OpenRouter. O painel Reflex mostra modelo, probabilidades, latência e custo reportado.
+Há consumo de API; em falha, o chat continua com fallback local explicitamente identificado.
+
+[Como funciona e limites](docs/jev-reflex.md) ·
+[Jarvis Modelo: base reutilizável com JEV](https://inematds.github.io/jarvismodelo/guia/)
 
 ## Instalar e abrir
 

@@ -18,6 +18,7 @@ export type Settings = {
   focusEnabled: boolean;
   screenEnabled: boolean;
   claudeEnabled: boolean;
+  reflexEnabled: boolean;
   mediaMaxJobs: number;
   releaseChannel: "stable" | "preview";
 };
@@ -71,6 +72,7 @@ export const defaults: Settings = {
   focusEnabled: true,
   screenEnabled: true,
   claudeEnabled: false,
+  reflexEnabled: false,
   mediaMaxJobs: 2,
   releaseChannel: "stable",
 };

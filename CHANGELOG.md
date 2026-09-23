@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.0 — 2026-09-23
+
+- JEV Reflex real antes do cérebro: cinco decisões, validação de contrato, timeout, fallback e telemetria persistente.
+- Controle de ativação e painel de decisões na conversa; gates de voz na API.
+- Núcleo extraído para Jarvis Modelo, testes e análise do vídeo.
+
 ## 0.1.0 — 2026-09-13
 
 Primeira aplicação executável do projeto Jarvis v7.

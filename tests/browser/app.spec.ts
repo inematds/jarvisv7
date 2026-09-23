@@ -64,3 +64,37 @@ test("menu e histórico disponíveis no celular sem overflow", async ({
   await page.getByRole("button", { name: "Dados e versões" }).click();
   await expect(page.getByRole("link", { name: "Exportar JSON" })).toBeVisible();
 });
+test("JEV pode ser ativado e fallback fica visível sem credencial", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await page
+    .getByRole("button", { name: "Configurações", exact: true })
+    .click();
+  await page.getByRole("button", { name: "Preferências", exact: true }).click();
+  const toggle = page.getByRole("switch", { name: /JEV/ });
+  await toggle.check();
+  await page.getByRole("button", { name: /Salvar/ }).click();
+  await page.getByRole("button", { name: "Conversa", exact: true }).click();
+  await page
+    .getByLabel("Mensagem para o Jarvis")
+    .fill("Quais são minhas notas do projeto?");
+  await page
+    .getByRole("button", { name: "Enviar mensagem", exact: true })
+    .click();
+  await expect(
+    page.locator("summary").filter({ hasText: "JEV indisponível" }),
+  ).toBeVisible();
+  await page.locator("summary").filter({ hasText: "JEV indisponível" }).click();
+  await expect(
+    page.getByText("Confira a conexão OpenRouter.", { exact: false }),
+  ).toBeVisible();
+  await page.screenshot({ path: "/tmp/jarvis-jev-desktop.png" });
+  await page.setViewportSize({ width: 390, height: 844 });
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+  await page.screenshot({ path: "/tmp/jarvis-jev-mobile.png" });
+});

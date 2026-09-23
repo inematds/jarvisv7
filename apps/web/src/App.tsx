@@ -1,3 +1,4 @@
+import type { Decision } from "../../../packages/reflex/reflex.js";
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import {
   MessageSquare,
@@ -430,6 +431,7 @@ function Chat({
     [brainPicker, setBrainPicker] = useState(false),
     [historyPicker, setHistoryPicker] = useState(false),
     [source, setSource] = useState<Message["sources"][number] | null>(null);
+  const [reflex, setReflex] = useState<Decision | null>(null);
   const transcript = useRef(""),
     recognition = useRef<any>(null),
     finish = useRef<any>(null),
@@ -439,6 +441,9 @@ function Chat({
     sending = useRef(false),
     streamRef = useRef<MediaStream | null>(null),
     runRef = useRef("");
+  useEffect(() => {
+    setReflex(null);
+  }, [current?.id]);
   const loadConversations = () => api("/conversations").then(setConversations);
   useEffect(() => {
     isMounted.current = true;
@@ -531,6 +536,7 @@ function Chat({
     sending.current = true;
     setQuestion("");
     setDraft("");
+    setReflex(null);
     let cid = current?.id;
     try {
       let c = current;
@@ -570,6 +576,7 @@ function Chat({
         for (const e of events) {
           seq = e.seq;
           if (e.type === "text") setDraft(e.data.text);
+          if (e.type === "reflex") setReflex(e.data);
         }
         if (!active(r)) {
           finished = true;
@@ -834,6 +841,61 @@ function Chat({
                   {draft || "Consultando o contexto e preparando a resposta…"}
                 </div>
               </article>
+            )}
+            {reflex && (
+              <details className="message assistant">
+                <summary>
+                  Reflex ·{" "}
+                  {reflex.source === "jev"
+                    ? "JEV"
+                    : reflex.source === "fallback"
+                      ? "JEV indisponível · fallback local"
+                      : "regras locais"}{" "}
+                  · {reflex.latencyMs} ms
+                </summary>
+                <p>
+                  Destino:{" "}
+                  {
+                    {
+                      vault: "notas e memórias",
+                      communication: "comunicação e agenda",
+                      task: "tarefa",
+                      general: "conversa geral",
+                      insufficient: "contexto completo por precaução",
+                    }[reflex.route]
+                  }
+                  .
+                </p>
+                <p>
+                  {reflex.evidenceIds.length} notas candidatas. Encontrar uma
+                  nota não comprova que ela responde à pergunta.
+                </p>
+                {reflex.source === "fallback" && (
+                  <p>
+                    Confira a conexão OpenRouter. Esta resposta continuou com o
+                    roteamento local.
+                  </p>
+                )}
+                {reflex.answers && (
+                  <>
+                    <p>
+                      Probabilidades do JEV; não representam acerto medido nem
+                      autorização para agir.
+                    </p>
+                    <pre>
+                      {JSON.stringify(
+                        {
+                          model: reflex.model,
+                          answers: reflex.answers,
+                          usage: reflex.usage,
+                        },
+                        null,
+                        2,
+                      )}
+                    </pre>
+                  </>
+                )}
+              </details>
             )}
             <div ref={end} />
           </div>
@@ -2039,6 +2101,11 @@ function Preferences({
               <div className="toggle-list">
                 {[
                   [
+                    "reflexEnabled",
+                    "JEV · roteamento Reflex",
+                    "Usa sua conexão OpenRouter para cinco decisões antes da resposta. Envia o pedido e até seis trechos de notas; há consumo de API. Em falha, continua localmente.",
+                  ],
+                  [
                     "voice",
                     "Respostas em voz",
                     "Falar respostas neste navegador; disponível conforme as vozes instaladas.",
@@ -2318,7 +2385,7 @@ function Preferences({
           <div className="update-section">
             <div className="section-title">
               <h2>Atualizações</h2>
-              <Tag>v0.1.0</Tag>
+              <Tag>v0.2.0</Tag>
             </div>
             <p className="muted">
               Nesta versão, a consulta verifica releases. A instalação de

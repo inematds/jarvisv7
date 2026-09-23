@@ -1,3 +1,7 @@
+# Atualização 0.2.0 — JEV Reflex
+
+JEV real integrado ao chat, com ativação nas preferências, cinco decisões estruturadas, painel e fallback. Veja [contrato, testes e limites](jev-reflex.md). O inventário da base 0.1.0 abaixo permanece aplicável.
+
 # Estado da implementação — 0.1.0
 
 Data: 13/09/2026. Projeto: **Jarvis v7**. Os documentos de planejamento descrevem a visão completa; esta página descreve o código entregue.

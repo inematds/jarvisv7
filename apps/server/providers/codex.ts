@@ -82,7 +82,7 @@ export class CodexBridge {
         } catch {}
       });
       await this.raw("initialize", {
-        clientInfo: { name: "jarvis_v7", title: "Jarvis v7", version: "0.1.0" },
+        clientInfo: { name: "jarvis_v7", title: "Jarvis v7", version: "0.2.0" },
       });
       proc.stdin.write(
         JSON.stringify({ method: "initialized", params: {} }) + "\n",
