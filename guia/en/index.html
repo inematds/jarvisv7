@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
 <!-- Guia baseado no template INEMA projetos-landing-guia. -->
-<html lang="pt-BR">
+<html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Jarvis v7 + JEV Reflex — cinco decisões antes da resposta</title>
-<meta content="Instale o Jarvis v7: notas e memórias persistentes, Codex e Claude OAuth, OpenRouter API e estúdio Kie. JEV Reflex real antes do cérebro. Guia da versão 0.2.0." name="description"/>
+<title>Jarvis v7 + JEV Reflex — five decisions before the answer</title>
+<meta content="Install Jarvis v7: persistent notes and memories, Codex and Claude OAuth, OpenRouter API, and Kie Studio. Real JEV Reflex before the brain. Guide for version 0.2.0." name="description"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet"/>
@@ -97,7 +97,7 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 <link href="https://inematds.github.io/jarvisv7/guia/" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/jarvisv7/guia/en/" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/jarvisv7/guia/es/" hreflang="es" rel="alternate"/></head>
-<body><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="./" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">PT</a><a href="en/" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="es/" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">ES</a></div>
+<body><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="./" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">EN</a><a href="../es/" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">ES</a></div>
 <nav><div class="wrap">
 <a class="brand" href="#top"><span class="emoji">🤖</span> Jarvis v7</a>
 <span class="sep">|</span>
@@ -107,12 +107,12 @@
 <a class="pro" href="https://inema.pro" rel="noopener" target="_blank">PRO</a>
 </span>
 <div class="links">
-<a class="sec" href="#oque">O que é</a>
-<a class="sec" href="#fluxo">Como funciona</a>
-<a class="sec" href="#guia">Guia de uso</a>
-<a class="sec" href="#exemplos">Exemplos</a>
+<a class="sec" href="#oque">What it is</a>
+<a class="sec" href="#fluxo">How it works</a>
+<a class="sec" href="#guia">User guide</a>
+<a class="sec" href="#exemplos">Examples</a>
 <a class="sec" href="#roadmap">Roadmap</a>
-<button aria-label="Alternar tema" class="tgl" id="themeToggle" title="Alternar tema">🌙</button>
+<button aria-label="Toggle theme" class="tgl" id="themeToggle" title="Toggle theme">🌙</button>
 <a class="btn" href="https://github.com/inematds/jarvisv7" rel="noopener" target="_blank">GitHub</a>
 </div>
 </div></nav>
@@ -120,45 +120,45 @@
 <div class="glow"></div>
 <div class="wrap">
 <div>
-<span class="chip">Projeto aberto · versão 0.2.0 · JEV Reflex</span>
-<h1>Seu Jarvis.<br/>Agora com <span class="amb">JEV Reflex.</span></h1>
-<p class="lead">Cinco decisões antes da resposta: o JEV identifica o destino, avalia o pedido e consulta a evidência das notas antes do cérebro principal. Com probabilidades, latência e fallback visíveis.</p>
+<span class="chip">Open project · version 0.2.0 · JEV Reflex</span>
+<h1>Your Jarvis.<br/>Now with <span class="amb">JEV Reflex.</span></h1>
+<p class="lead">Five decisions before the response: JEV identifies the destination, evaluates the request, and checks evidence from the notes before the main brain responds. Probabilities, latency, and fallback are visible.</p>
 <div class="cta">
-<a class="btn" href="#guia">Começar o guia</a>
-<a class="btn ghost" href="https://github.com/inematds/jarvisv7" rel="noopener" target="_blank">Ver no GitHub</a>
+<a class="btn" href="#guia">Start the guide</a>
+<a class="btn ghost" href="https://github.com/inematds/jarvisv7" rel="noopener" target="_blank">View on GitHub</a>
 </div>
 </div>
-<figure><img alt="Ilustração de um assistente organizando documentos; não representa a interface" src="assets/hero.png"/></figure>
+<figure><img alt="Illustration of an assistant organizing documents; it does not represent the interface" src="../assets/hero.png"/></figure>
 </div>
 </header>
-<section id="jev"><div class="wrap"><h2>JEV Reflex: a novidade desta versão.</h2><p class="sub">O JEV real, via OpenRouter, avalia cinco perguntas em uma chamada: destino, pedido completo, direcionamento ao assistente, necessidade de ação e cobertura das notas.</p><div class="grid g3"><div class="card"><h3>1. Conecte OpenRouter</h3><p>Em Configurações → Conexões, configure sua credencial. Usar o JEV consome API e envia o pedido e até seis trechos selecionados.</p></div><div class="card"><h3>2. Ative JEV Reflex</h3><p>Em Preferências, ative “JEV · roteamento Reflex” e salve. Depois faça uma pergunta na conversa.</p></div><div class="card"><h3>3. Veja a decisão real</h3><p>Expanda Reflex no chat: modelo, probabilidades, latência e uso informado. Em falha, o chat continua e sinaliza o fallback local.</p></div></div><p class="sub">As probabilidades não são autorização para agir. O chat continua sem executar email ou agenda. Não prometemos “100 vezes mais rápido”: isso precisa ser medido no seu uso.</p><a class="btn" href="https://inematds.github.io/jarvismodelo/guia/">Crie outro Jarvis com esta base + JEV</a></div></section>
+<section id="jev"><div class="wrap"><h2>JEV Reflex: what’s new in this version.</h2><p class="sub">Real JEV, via OpenRouter, evaluates five questions in one call: destination, complete request, direction to the assistant, need for action, and coverage of the notes.</p><div class="grid g3"><div class="card"><h3>1. Connect OpenRouter</h3><p>In Settings → Connections, configure your credential. Using JEV consumes API credits and sends the request and up to six selected excerpts.</p></div><div class="card"><h3>2. Enable JEV Reflex</h3><p>In Preferences, enable “JEV · Reflex routing” and save. Then ask a question in the chat.</p></div><div class="card"><h3>3. See the real decision</h3><p>Expand Reflex in the chat: model, probabilities, latency, and reported usage. If it fails, the chat continues and indicates the local fallback.</p></div></div><p class="sub">Probabilities are not authorization to act. The chat still doesn't send emails or manage your calendar. We don't promise “100 times faster”: that needs to be measured in your use.</p><a class="btn" href="https://inematds.github.io/jarvismodelo/guia/">Create another Jarvis with this foundation + JEV</a></div></section>
 <section id="oque"><div class="wrap">
-<span class="chip">O que é</span>
-<h2>Um espaço pessoal para pensar e criar</h2>
-<p class="sub">Esta página é o guia público. A aplicação roda no seu computador, com suas próprias contas.</p>
+<span class="chip">What it is</span>
+<h2>A personal space to think and create</h2>
+<p class="sub">This page is the public guide. The application runs on your computer, with your own accounts.</p>
 <div class="grid g3">
-<div class="card"><h3>🤖 Conhecimento persistente</h3><p>Importe MD, TXT e PDF textual. Revise notas, salve memórias e consulte os trechos usados nas respostas.</p></div>
-<div class="card"><h3>🤖 Cérebro configurável</h3><p>Codex e Claude usam o OAuth dos runtimes oficiais. OpenRouter usa API. Troque de cérebro por conversa.</p></div>
-<div class="card"><h3>🤖 Módulos à sua escolha</h3><p>Ative mídia Kie, voz do navegador, frame de tela e foco manual. A busca local funciona sem IA generativa.</p></div>
+<div class="card"><h3>🤖 Persistent knowledge</h3><p>Import MD, TXT, and text-based PDFs. Review notes, save memories, and consult the excerpts used in responses.</p></div>
+<div class="card"><h3>🤖 Configurable brain</h3><p>Codex and Claude use OAuth from the official runtimes. OpenRouter uses an API. Switch brains for each conversation.</p></div>
+<div class="card"><h3>🤖 Modules of your choice</h3><p>Enable Kie media, browser voice, screen frame, and manual focus. Local search works without generative AI.</p></div>
 </div>
 </div></section>
 <section id="fluxo"><div class="wrap">
-<span class="chip">Como funciona</span>
-<h2>Da sua base para a próxima pergunta</h2>
-<p class="sub">Você controla o que salva e qual provedor recebe o contexto selecionado. A base permanece na instalação local.</p>
+<span class="chip">How it works</span>
+<h2>From your foundation to the next question</h2>
+<p class="sub">You control what you save and which provider receives the selected context. The database stays in your local installation.</p>
 <div class="flow">
-<span>Importar notas</span><span class="arr">→</span>
-<span>Escolher cérebro</span><span class="arr">→</span>
-<span>Perguntar e revisar fontes</span>
+<span>Import notes</span><span class="arr">→</span>
+<span>Choose a brain</span><span class="arr">→</span>
+<span>Ask questions and review sources</span>
 <!-- ...quantas etapas o fluxo tiver... -->
 </div>
 </div></section>
 <section id="pre"><div class="wrap">
-<span class="chip">Pré-requisitos</span>
-<h2>O essencial para começar</h2>
-<p class="sub">Node.js 24, npm e Git. Testado em Linux. Codex, Claude e pdftotext são opcionais conforme os recursos escolhidos.</p>
+<span class="chip">Prerequisites</span>
+<h2>The essentials to get started</h2>
+<p class="sub">Node.js 24, npm, and Git. Tested on Linux. Codex, Claude, and pdftotext are optional, depending on the features you choose.</p>
 <div class="grid g3">
-<div class="card"><h3>Confira o ambiente</h3><p>Use Node 24. Depois de instalar as dependências, o diagnóstico verifica os runtimes sem imprimir credenciais.</p><pre><span class="c"># comando</span>
+<div class="card"><h3>Check the environment</h3><p>Use Node 24. After installing the dependencies, diagnostics check the runtimes without printing credentials.</p><pre><span class="c"># command</span>
 node --version
 npm --version
 git --version</pre></div>
@@ -166,42 +166,42 @@ git --version</pre></div>
 </div>
 </div></section>
 <section id="guia"><div class="wrap">
-<span class="chip">Guia de uso · passo a passo</span>
-<h2>Do clone à primeira memória</h2>
-<p class="sub">Os comandos abaixo são executados no seu terminal. A página do GitHub Pages não hospeda o servidor nem recebe suas credenciais.</p>
-<div class="step"><div class="b">1</div><div><h3>Instale o projeto</h3><p>Clone o código público e compile a aplicação.</p><pre>git clone https://github.com/inematds/jarvisv7.git
+<span class="chip">User guide · step by step</span>
+<h2>From clone to first memory</h2>
+<p class="sub">The commands below run in your terminal. The GitHub Pages site does not host the server or receive your credentials.</p>
+<div class="step"><div class="b">1</div><div><h3>Install the project</h3><p>Clone the public code and build the application.</p><pre>git clone https://github.com/inematds/jarvisv7.git
 cd jarvisv7
 npm ci
 npm run preflight
 npm start</pre></div></div>
-<div class="step"><div class="b">2</div><div><h3>Abra seu espaço</h3><p>Acesse http://127.0.0.1:4700. Escolha um perfil; as notas fictícias são opcionais. Não exponha a porta na rede.</p></div></div>
-<div class="step"><div class="b">3</div><div><h3>Conecte sua conta</h3><p>Em Configurações → Conexões, use o login do Codex no navegador ou o login já existente. Para Claude, autentique o runtime no terminal e habilite o adaptador pessoal.</p><pre>claude auth login</pre></div></div>
-<div class="step"><div class="b">4</div><div><h3>Escolha modelo e esforço</h3><p>Em Cérebro, selecione provedor, modelo e esforço. Comece em medium. OpenRouter e Kie usam credenciais próprias salvas apenas nesta instalação.</p></div></div>
-<div class="step"><div class="b">5</div><div><h3>Salve conhecimento e converse</h3><p>Importe documentos em Conhecimento. Digite “Lembre que…” para salvar uma memória. O botão de provedor no campo de mensagem troca o cérebro da conversa e envia o histórico limitado ao próximo provedor.</p></div></div>
-<div class="step"><div class="b">6</div><div><h3>Use os módulos</h3><p>Em Preferências, ative mídia, voz, tela ou foco. Na Kie, confirme o consumo antes de gerar. Tela envia apenas um frame explícito junto da pergunta; foco é manual.</p></div></div>
-<div class="step"><div class="b">7</div><div><h3>Faça backup</h3><p>Pare o servidor com Ctrl+C e copie banco e biblioteca. A exportação JSON da interface não inclui credenciais; a importação web adiciona apenas notas e memórias.</p><pre>npm run backup -- --stopped</pre></div></div>
-<div class="step"><div class="b">8</div><div><h3>Atualize uma instalação</h3><p>Configure o repositório de releases no ambiente antes de iniciar. Para instalar uma tag futura, pare o servidor, mantenha o Git limpo e use o comando abaixo. v0.1.1 é apenas um exemplo.</p><pre>export JARVIS_RELEASE_REPO=inematds/jarvisv7
+<div class="step"><div class="b">2</div><div><h3>Open your workspace</h3><p>Go to http://127.0.0.1:4700. Choose a profile; the fictional notes are optional. Don't expose the port to the network.</p></div></div>
+<div class="step"><div class="b">3</div><div><h3>Connect your account</h3><p>In Settings → Connections, use the Codex login in your browser or your existing login. For Claude, authenticate the runtime in the terminal and enable the personal adapter.</p><pre>claude auth login</pre></div></div>
+<div class="step"><div class="b">4</div><div><h3>Choose model and effort</h3><p>In Brain, select a provider, model, and effort. Start with medium. OpenRouter and Kie use their own credentials, saved only in this installation.</p></div></div>
+<div class="step"><div class="b">5</div><div><h3>Save knowledge and chat</h3><p>Import documents into Knowledge. Type “Remember that…” to save a memory. The provider button in the message field switches the conversation’s brain and sends the limited history to the next provider.</p></div></div>
+<div class="step"><div class="b">6</div><div><h3>Use the modules</h3><p>In Preferences, enable media, voice, screen, or focus. With Kie, confirm the usage before generating. Screen sends only one explicit frame with the question; focus is manual.</p></div></div>
+<div class="step"><div class="b">7</div><div><h3>Back up</h3><p>Stop the server with Ctrl+C and copy the database and library. The interface’s JSON export does not include credentials; the web import only adds notes and memories.</p><pre>npm run backup -- --stopped</pre></div></div>
+<div class="step"><div class="b">8</div><div><h3>Update an installation</h3><p>Configure the releases repository in the environment before starting. To install a future tag, stop the server, keep Git clean, and use the command below. v0.1.1 is just an example.</p><pre>export JARVIS_RELEASE_REPO=inematds/jarvisv7
 # Instalar uma tag quando ela existir:
 npm run update -- v0.1.1 --stopped</pre></div></div>
 </div></section>
 <section id="exemplos"><div class="wrap">
-<span class="chip">Exemplos</span>
-<h2>Duas formas de começar</h2>
-<p class="sub">Use uma nota sua ou os exemplos fictícios opcionais do assistente inicial.</p>
-<div class="grid g2"><div class="card"><h3>Memória de projeto</h3><pre>Lembre que o projeto Aurora será lançado em outubro.</pre><p>O Jarvis salva uma memória real, disponível para revisão em Memórias.</p></div><div class="card"><h3>Consulta com fontes</h3><pre>O que minhas notas dizem sobre o projeto Aurora?</pre><p>A busca recupera trechos. Com um LLM conectado, a resposta pode citar as fontes; no modo local, mostra somente os trechos.</p></div></div>
+<span class="chip">Examples</span>
+<h2>Two ways to get started</h2>
+<p class="sub">Use one of your notes or the optional fictional examples from the initial assistant.</p>
+<div class="grid g2"><div class="card"><h3>Project memory</h3><pre>Remember that project Aurora will launch in October.</pre><p>Jarvis saves a real memory, available for review under Memories.</p></div><div class="card"><h3>Search with sources</h3><pre>What do my notes say about project Aurora?</pre><p>Search retrieves excerpts. With a connected LLM, the response can cite sources; in local mode, it shows only the excerpts.</p></div></div>
 </div></section>
 <section id="roadmap"><div class="wrap">
 <span class="chip">Roadmap</span>
-<h2>O que está pronto e o que vem depois</h2>
-<p class="sub">Jarvis v7 é o nome do projeto. 0.2.0 adiciona o JEV Reflex à base inicial, com limites documentados.</p>
-<div class="phase"><div class="tag">0.2.0</div><div class="d"><strong>JEV Reflex integrado</strong><span>Cinco decisões reais antes do cérebro, painel no chat, ativação nas preferências e fallback local.</span></div></div>
-<div class="phase"><div class="tag">0.1.0</div><div class="d"><strong>Base funcional entregue</strong><span>Conversa, notas, memórias, mapa, seleção de cérebro, adaptador Kie, voz/tela do navegador, foco manual, backup e atualização manual.</span></div></div>
-<div class="phase"><div class="tag">Validação</div><div class="d"><strong>16 testes e OAuth real</strong><span>14 testes de API/persistência/fila e 2 de navegador aprovados. Codex e Claude responderam com OAuth. Geração paga Kie e OpenRouter não foi executada sem credenciais.</span></div></div><div class="phase"><div class="tag">Depois</div><div class="d"><strong>Expansão do sistema</strong><span>Agnes, automações, controle desktop, streaming e marketplace ainda não estão implementados. Consulte o estado da implementação no repositório.</span></div></div><p><a href="https://github.com/inematds/jarvisv7#documentação-completa">Toda a documentação no README →</a></p>
+<h2>What’s ready and what comes next</h2>
+<p class="sub">Jarvis v7 is the project name. 0.2.0 adds JEV Reflex to the initial foundation, with documented limits.</p>
+<div class="phase"><div class="tag">0.2.0</div><div class="d"><strong>Integrated JEV Reflex</strong><span>Five real decisions before the brain responds, a panel in the chat, activation in preferences, and local fallback.</span></div></div>
+<div class="phase"><div class="tag">0.1.0</div><div class="d"><strong>Working foundation delivered</strong><span>Chat, notes, memories, map, brain selection, Kie adapter, browser voice/screen, manual focus, backup, and manual update.</span></div></div>
+<div class="phase"><div class="tag">Validation</div><div class="d"><strong>16 tests and real OAuth</strong><span>14 API/persistence/queue tests and 2 browser tests passed. Codex and Claude responded with OAuth. Paid Kie and OpenRouter generation was not run without credentials.</span></div></div><div class="phase"><div class="tag">Then</div><div class="d"><strong>System expansion</strong><span>Agnes, automations, desktop control, streaming, and the marketplace are not implemented yet. Check the implementation status in the repository.</span></div></div><p><a href="https://github.com/inematds/jarvisv7#documentação-completa">All documentation in the README →</a></p>
 </div></section>
 <footer>
 <div class="wrap">
 <div class="pill">React + TypeScript</div><div class="pill">Fastify + SQLite</div><div class="pill">MIT</div>
-<p style="margin-top:18px">Jarvis v7 · Contas pessoais · dados locais ·
+<p style="margin-top:18px">Jarvis v7 · Personal accounts · local data ·
       <a href="https://github.com/inematds/jarvisv7">inematds/jarvisv7</a> ·
       <a href="https://inema.club">INEMA.CLUB</a></p>
 </div>

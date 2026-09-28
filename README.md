@@ -1,5 +1,7 @@
 # Jarvis v7
 
+**🇧🇷 [Português](README.md) · 🇺🇸 [English](README.en.md) · 🇪🇸 [Español](README.es.md)**
+
 **[Guia público de uso](https://inematds.github.io/jarvisv7/guia/)** · [Versões](https://github.com/inematds/jarvisv7/releases)
 
 Assistente pessoal local e base de referência para criar seu próprio Jarvis. Interface em português, conhecimento persistente e escolha de cérebro por conversa: **Codex OAuth, Claude OAuth ou OpenRouter API**. Imagens e vídeos pela **Kie**.
